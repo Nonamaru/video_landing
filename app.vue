@@ -22,5 +22,8 @@ body{
   --bone-color: #dfdfdf;
   --skin-color: #f5f5f5;
   --light-gray-color: #f0f3f7;
+
+  --main-border-radius: 16px;
+  --small-border-radius: 8px;
 }
 </style>

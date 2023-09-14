@@ -10,12 +10,18 @@
             </div>
             <a class="number" href="tel=+79124734699">+79124734699</a>
         </div>
-        <div class="body"></div>
+
+        <div class="body">
+            <div class="face">
+                <FaceView />
+            </div>
+        </div>
+        
         <div class="footer">
             <div class="logo-contacts">
                 <text>LOGO</text>
-                <text>EMAIN</text>
-                <text>NUMBER</text>
+                <a href = "mailto:abc@example.com?subject=Feedback&body=Message">a.kataev@gmail.com</a>
+                <a href="tel=+79124734699">+79124734699</a>
             </div>
             <div class="footer-anchords">
                 <div class="footer-anchor">Услуги</div>
@@ -47,7 +53,7 @@
 
 /*HEADER*/
 .header{
-    border-radius: 16px;
+    border-radius: var(--main-border-radius);
     background-color: var(--white-color);
     padding: 8px 16px;
     margin-top: 1%;
@@ -62,7 +68,7 @@
     gap: 10px;
 }
 .anchor{
-    border-radius: 8px;
+    border-radius: var(--small-border-radius);
     background-color: var(--light-gray-color);
     padding: 4px 8px;
     display: flex;
@@ -73,7 +79,16 @@
     text-decoration: none;
     color: black;
 }
+.number:hover{color: var(--blue-color)}
 /*------*/
+
+
+/*BODY*/
+.body{
+    width: 100%;
+    border: 1px solid black;
+}
+/*----*/
 
 
 /*FOOTER*/
@@ -84,7 +99,7 @@
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     padding: 16px;
-    border-radius: 16px;
+    border-radius: var(--main-border-radius);
 }
 
 .logo-contacts{
@@ -93,8 +108,15 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
-    font-size: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    gap: 10px;
 }
+.logo-contacts a{
+    text-decoration: none;
+    color: black;
+}
+.logo-contacts a:hover{color: var(--blue-color)}
 
 .footer-anchords{
     grid-column: 2;
@@ -121,6 +143,11 @@
     justify-content: left;
     align-items: end;
 }
+.confidential-policy a{
+    text-decoration: none;
+    color: var( --gray-blue-color);
+}
+.confidential-policy a:hover{color: var(--blue-color)}
 
 .address{
     grid-column: 2;
