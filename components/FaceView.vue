@@ -1,12 +1,12 @@
 <template>
-<div class="container">
+<div class="face-view">
     <div class="first">1</div>
     <div class="second">2</div>
     <div class="photo">3</div>
 </div>
 </template>
 <style scoped>
-.container{
+.face-view{
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 50% 50%;
@@ -34,6 +34,6 @@
     border: 1px solid black;
     border-radius: var(--main-border-radius);
     background-color: var(--white-color);
-    padding: 16px;
+    
 }
 </style>
