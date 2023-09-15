@@ -17,9 +17,11 @@
             </div>
         </div>
     </div>
+    <PostHeader />
     <div class="body">
-        <div class="first">1</div>
-        <div class="which">2</div>
+        <div class="why">
+            <WhyView />
+        </div>
         <div class="calculate">3</div>
         <div class="youcantake">4</div>
     </div>
@@ -143,6 +145,29 @@ export default {
 .body{
     width: 100vw;
     background-color: var(--gray-color);
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.why{
+    width: 95vw;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+.calculate{
+    width: 95vw;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+.youcantake{
+    width: 95vw;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
 }
 /*----*/
 
@@ -227,7 +252,7 @@ export default {
 }
 
 .call-button{
-    border: 4px solid #ff6600c0;
+    border: 3px solid #ff6600c0;
     width: 30%;
     margin-left: auto;
     margin-right: auto;
@@ -236,6 +261,7 @@ export default {
     border-radius: 32px;
     margin-top: 36px;
     margin-bottom: 36px;
+    cursor: pointer;
 }
 /*------*/
 </style>
