@@ -1,160 +1,241 @@
 <template>
-<div class="web-view">
-    <div class="container">
-        <div class="header">
-            <div class="logo">LOGO</div>
-            <div class="anchords">
-                <div class="anchor">Услуги</div>
-                <div class="anchor">Схема работы</div>
-                <div class="anchor">Контакты</div>
-            </div>
-            <a class="number" href="tel=+79124734699">+79124734699</a>
+<div class="container">
+    <div class="header">
+        <div class="logo">LOGO</div>
+        <div class="anchords">
+            <a href="#" class="anchor">odin</a>
+            <a href="#" class="anchor">dva</a>
+            <a href="#" class="anchor">tri</a>
         </div>
-
-        <div class="body">
-            <div class="face">
-                <FaceView />
+        <div class="number-feedback">
+            <div class="number-icon">
+                <Icon class="icon" icon="gg:phone" />
+                <a href="tel:+79124734699">+7 (912) 473 46-99</a>
+            </div>
+            <div class="feedback">
+                <text>Заказать звонок</text>
             </div>
         </div>
-        
-        <div class="footer">
-            <div class="logo-contacts">
-                <text>LOGO</text>
-                <a href = "mailto:abc@example.com?subject=Feedback&body=Message">a.kataev@gmail.com</a>
-                <a href="tel=+79124734699">+79124734699</a>
+    </div>
+    <div class="body">
+        <div class="first">1</div>
+        <div class="which">2</div>
+        <div class="calculate">3</div>
+        <div class="youcantake">4</div>
+    </div>
+    <div class="footer">
+        <div class="footer-title">
+            <text style="color: var(--orange-color)">Остались вопросы?</text>&nbsp;
+            <text style="color: var(--white-color)">Позвоните по телефону</text>
+        </div>
+        <a href="tel:+79124734699" class="footer-number">+7 (912) 473 46-99</a>
+        <div class="footer-call-feedback">
+            <text class="feedback-title">Или заполните форму и мы вам перезвоним</text>
+            <div class="inputs-politics">
+                <div class="inputs">
+                    <Icon class="footer-icon" icon="material-symbols:person" />
+                    <input type="text" placeholder="Имя" />
+                </div>
+                <div class="inputs">
+                    <Icon class="footer-icon" icon="bxs:phone" />
+                    <input type="text" placeholder="Телефон" />
+                </div>
+                <div class="politic">
+                    <div class="checkbox">
+                        <Icon style="font-size: 18px; color: var(--black-color)" icon="material-symbols:done" />
+                    </div>
+                    <text style="color: var(--orange-color)">Даю согласие на обработку моих персональных данных и соглашаюсь с политикой конфиденциальности</text>
+                </div>
             </div>
-            <div class="footer-anchords">
-                <div class="footer-anchor">Услуги</div>
-                <div class="footer-anchor">Схема работы</div>
-                <div class="footer-anchor">Контакты</div>
+            <div class="call-button">
+                <text>Отправить</text>
             </div>
-            <div class="confidential-policy">
-                <a href="#">Политика конфеденциальности</a>
-            </div>
-            <div class="address">Екатеринбург, Кулибина 2, офис 302</div>
         </div>
     </div>
 </div>
 </template>
+<script>
+import { Icon } from '@iconify/vue';
+export default {
+	components: {
+		Icon,
+	},
+};
+</script>
 <style scoped>
-/*MAIN*/
-.web-view{
-    width: 100vw;
-}
 .container{
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100vw;
+    background-color: var(--black-color);
+    color: var(--white-color);
     display: flex;
     flex-direction: column;
 }
-/*----*/
 
 
 /*HEADER*/
 .header{
-    border-radius: var(--main-border-radius);
-    background-color: var(--white-color);
-    padding: 8px 16px;
-    margin-top: 1%;
+    display: grid;
+    grid-template-columns: 10% 65% 25%;
+    grid-template-rows: 1;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: var(--bold-font);
+    font-size: 16px;
+}
+
+/*LOGO*/
+
+/*ANCHORDS*/
+.anchords{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.anchor{
+    color: var(--white-color);
+    text-decoration: none;
+}
+.anchor:hover{
+    color: var(--orange-color);
+}
+
+/*NUMBER AND FEEDBACK*/
+.number-feedback{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.anchords{
+.number-icon{
+    color: var(--white-color);
     display: flex;
     flex-direction: row;
-    gap: 10px;
-}
-.anchor{
-    border-radius: var(--small-border-radius);
-    background-color: var(--light-gray-color);
-    padding: 4px 8px;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    width: 50%;
 }
-.number{
+.icon{
+    font-size: 18px;
+    margin-right: 3%;
+}
+.number-icon a{
     text-decoration: none;
-    color: black;
+    color: var(--white-color);
 }
-.number:hover{color: var(--blue-color)}
+.feedback{
+    background-color: var(--orange-color);
+    padding: 8px 16px;
+    border-radius: 16px;
+    margin-left: 5%;
+    cursor: pointer;
+    
+}
 /*------*/
 
 
 /*BODY*/
 .body{
-    width: 100%;
-    border: 1px solid black;
+    width: 100vw;
+    background-color: var(--gray-color);
 }
 /*----*/
 
 
 /*FOOTER*/
 .footer{
-    margin-top: 10%;
-    background-color: var(--white-color);
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    padding: 16px;
-    border-radius: var(--main-border-radius);
-}
-
-.logo-contacts{
-    grid-column: 1;
-    grid-row: 1;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: var(--bold-font);
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    font-size: 16px;
-    font-weight: bold;
-    gap: 10px;
+    margin-top: 32px;
+    text-align: center;
 }
-.logo-contacts a{
+.footer-title{
+    text-align: center;
+    font-size: 1rem;
+}
+.footer-number{
+    font-size: 36px;
     text-decoration: none;
-    color: black;
+    color: var(--white-color);
+    margin-top: 16px;
+    margin-bottom: 32px;
 }
-.logo-contacts a:hover{color: var(--blue-color)}
 
-.footer-anchords{
-    grid-column: 2;
-    grid-row: 1;
+.inputs-politics{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vh;
+}
+.inputs{
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 16px;
+    background-color: var(--white-color);
+    border-radius: 6px;
+    color: var(--black-color);
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    justify-content: right;
-    align-items: start;
-}
-.footer-anchor{
-    border-radius: 8px;
-    background-color: var(--light-gray-color);
-    padding: 4px 8px;
-    display: flex;
+    align-items: center;
     justify-content: center;
+    font-size: 28px;
+}
+.footer-icon{
+    margin-right: 2%;
+}
+.inputs input{
+    width: 80%;
+    font-size: 16px;
+    border: none;
+}
+.inputs input:focus{
+    outline:none;
+}
+
+.politic{
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-
-.confidential-policy{
-    grid-column: 1;
-    grid-row: 2;
+.checkbox{
+    margin-right: 8px;
+    background-color: var(--white-color);
+    width: 18px;
+    height: 18px;
     display: flex;
-    justify-content: left;
-    align-items: end;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
 }
-.confidential-policy a{
-    text-decoration: none;
-    color: var( --gray-blue-color);
+.politic text{
+    text-align: left;
+    font-size: 14px;
 }
-.confidential-policy a:hover{color: var(--blue-color)}
 
-.address{
-    grid-column: 2;
-    grid-row: 2;
-    display: flex;
-    justify-content: right;
-    font-size: 36px;
+.call-button{
+    border: 4px solid #ff6600c0;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 32px;
+    font-size: 16px;
+    border-radius: 32px;
+    margin-top: 36px;
+    margin-bottom: 36px;
 }
 /*------*/
 </style>
